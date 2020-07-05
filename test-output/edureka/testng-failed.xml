@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [edureka]">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="URL" value="https://www.edureka.co/"/>
+  <listeners>
+    <listener class-name="com.edureka.superhelper.ReportUtil"/>
+  </listeners>
+  <test thread-count="5" name="Home Page(failed)">
+    <classes>
+      <class name="com.edureka.test.Course">
+        <methods>
+          <include name="runBeforeSuite"/>
+          <include name="startReport"/>
+          <include name="TearDown_AM"/>
+          <include name="coursePage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.edureka.test.Course -->
+    </classes>
+  </test> <!-- Home Page(failed) -->
+</suite> <!-- Failed suite [edureka] -->
